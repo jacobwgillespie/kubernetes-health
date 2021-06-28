@@ -1,6 +1,6 @@
 {
   "name": "@k8ts/health",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helper library for implementing Kubernetes heath checks and graceful HTTP shutdown in Node applications",
   "repository": {
     "type": "git",
