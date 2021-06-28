@@ -1,6 +1,11 @@
 {
   "name": "@k8ts/health",
   "version": "0.1.0",
+  "description": "Helper library for implementing Kubernetes heath checks and graceful HTTP shutdown in Node applications",
+  "funding": {
+    "type": "GitHub",
+    "url": "https://github.com/sponsors/jacobwgillespie"
+  },
   "author": {
     "name": "Jacob Gillespie",
     "email": "jacobwgillespie@gmail.com"
@@ -8,6 +13,9 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "fmt": "prettier --write .",
@@ -24,5 +32,9 @@
     "typedoc": "^0.21.2",
     "typedoc-plugin-markdown": "^3.10.2",
     "typescript": "^4.3.4"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
 }
