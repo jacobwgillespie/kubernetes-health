@@ -5,6 +5,9 @@ A helper library for implementing Kubernetes heath checks and graceful HTTP shut
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
+- [Examples](#examples)
+  - [Standalone Health Server](#standalone-health-server)
+  - [Express](#express)
 - [License](#license)
 
 ## Installation
@@ -46,6 +49,10 @@ To get started:
    ```
 
    This will serve the endpoints `/healthz` and `/readyz` on port 4000 (all configurable, see below). These endpoints can thus be referenced from the liveness, readiness, and startup probes.
+
+## API
+
+[Read the API documentation.](./docs/modules.md)
 
 ## Examples
 
@@ -101,10 +108,6 @@ const app = express()
 app.get('/healthz', createLivenessProbeListener(health))
 app.get('/readyz', createReadinessProbeListener(health))
 ```
-
-## API
-
-[Read the API documentation.](./docs/modules.md)
 
 ## License
 
