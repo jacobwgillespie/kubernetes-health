@@ -40,10 +40,67 @@ To get started:
 3. You will need to expose this health status to Kubernetes via an HTTP endpoint, the easiest way to do this is to start a standalone health server with `startProbeServer()`:
 
    ```typescript
+   import {startProbeServer} from '@k8ts/health'
+
    startProbeServer(health)
    ```
 
    This will serve the endpoints `/healthz` and `/readyz` on port 4000 (all configurable, see below). These endpoints can thus be referenced from the liveness, readiness, and startup probes.
+
+## Examples
+
+### Standalone Health Server
+
+To serve a standard Node `http.Server` for the liveness and readiness endpoints:
+
+```typescript
+import {Health, startProbeServer} from '@k8ts/health'
+const health = new Health()
+
+startProbeServer(health)
+```
+
+To create a new Node `http.Server`, but not automatically listen:
+
+```typescript
+import {Health, createProbeServer} from '@k8ts/health'
+const health = new Health()
+
+const server = createProbeServer(health)
+```
+
+### Express
+
+To mark the application as ready when the server is listening, and gracefully handle in-flight requests during termination:
+
+```typescript
+import {Health, gracefulHttpTerminatorTask} from '@k8ts/health'
+import express from 'express'
+
+const health = new Health()
+const app = express()
+
+// ...
+
+const server = app.listen(3000, () => {
+  health.markReady()
+})
+
+health.beforeTermination(gracefulHttpTerminatorTask(server))
+```
+
+To integrate the liveness and readiness endpoints into an existing Express application:
+
+```typescript
+import {Health, createLivenessProbeListener, createReadinessProbeListener} from '@k8ts/health'
+import express from 'express'
+
+const health = new Health()
+const app = express()
+
+app.get('/healthz', createLivenessProbeListener(health))
+app.get('/readyz', createReadinessProbeListener(health))
+```
 
 ## API
 

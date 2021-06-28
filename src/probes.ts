@@ -107,20 +107,33 @@ export function createProbeServer(health: Health, options: ProbeServerOptions = 
   })
 }
 
+export interface ProbeServerListenOptions {
+  /**
+   * The port to listen on
+   *
+   * @default 4000
+   */
+  port?: number
+
+  /**
+   * The hostname to bind to
+   *
+   * @default all hostnames
+   */
+  hostname?: string
+}
+
 /**
  * Create and start a health probe server, listening on on the specified port / hostname.
  *
  * @param health the `Health` instance to serve
  * @param options options for the health probe server
- * @param port port to listen on (default: `4000`)
- * @param hostname hostname to listen on (default: all hostnames)
  */
 export function startProbeServer(
   health: Health,
-  options: ProbeServerOptions = {},
-  port = 4000,
-  hostname?: string,
+  options: ProbeServerOptions & ProbeServerListenOptions = {},
 ): http.Server {
+  const {port = 4000, hostname} = options
   const server = createProbeServer(health, options)
   return server.listen(port, hostname)
 }
