@@ -30,6 +30,8 @@ export interface Options {
   shutdownDelaySeconds: number
 
   /**
+   * Signals that trigger application shutdown.
+   *
    * @default ['SIGTERM', 'SIGHUP', 'SIGINT']
    */
   shutdownSignals: NodeJS.Signals[]
@@ -70,14 +72,14 @@ export class Health {
   /**
    * `true` if the application is live, `false` otherwise
    */
-  get isLive() {
+  get isLive(): boolean {
     return !this.#isTerminating && this.#beforeLiveTasks.length === 0
   }
 
   /**
    * `true` if the application is ready, `false` otherwise
    */
-  get isReady() {
+  get isReady(): boolean {
     return this.#isReady && this.#beforeReadyTasks.length === 0
   }
 
@@ -113,7 +115,7 @@ export class Health {
    *
    * @param task the task to execute
    */
-  beforeLive(task: Task) {
+  beforeLive(task: Task): void {
     this.#beforeLiveTasks.push(task)
     task().then(() => {
       this.#beforeLiveTasks.splice(this.#beforeLiveTasks.indexOf(task), 1)
@@ -125,7 +127,7 @@ export class Health {
    *
    * @param task the task to execute
    */
-  beforeReady(task: Task) {
+  beforeReady(task: Task): void {
     this.#beforeReadyTasks.push(task)
     task().then(() => {
       this.#beforeReadyTasks.splice(this.#beforeReadyTasks.indexOf(task), 1)
@@ -137,7 +139,7 @@ export class Health {
    *
    * @param task the task to execute
    */
-  beforeTermination(handler: Task) {
+  beforeTermination(handler: Task): void {
     this.#beforeTerminationTasks.push(handler)
   }
 
@@ -163,7 +165,7 @@ export class Health {
   /**
    * Mark the health instance as ready
    */
-  markReady() {
+  markReady(): void {
     if (this.#isTerminating) return
     this.#isReady = true
   }
@@ -171,7 +173,7 @@ export class Health {
   /**
    * Mark the health instance as not ready
    */
-  markNotReady() {
+  markNotReady(): void {
     if (this.#isTerminating) return
     this.#isReady = false
   }
@@ -181,7 +183,7 @@ export class Health {
    * If a `terminationGracePeriodSeconds` is defined, the process will be forcibly terminated after that amount
    * of time if it does not gracefully exit before then.
    */
-  async shutdown() {
+  async shutdown(): Promise<void> {
     if (this.#isTerminating) return
     this.#isTerminating = true
 

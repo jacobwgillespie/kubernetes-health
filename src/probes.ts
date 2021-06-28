@@ -115,7 +115,12 @@ export function createProbeServer(health: Health, options: ProbeServerOptions = 
  * @param port port to listen on (default: `4000`)
  * @param hostname hostname to listen on (default: all hostnames)
  */
-export function startProbeServer(health: Health, options: ProbeServerOptions = {}, port = 4000, hostname?: string) {
+export function startProbeServer(
+  health: Health,
+  options: ProbeServerOptions = {},
+  port = 4000,
+  hostname?: string,
+): http.Server {
   const server = createProbeServer(health, options)
-  server.listen(port, hostname)
+  return server.listen(port, hostname)
 }
