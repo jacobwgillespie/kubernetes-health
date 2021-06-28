@@ -2,6 +2,11 @@
   "name": "@k8ts/health",
   "version": "0.1.0",
   "description": "Helper library for implementing Kubernetes heath checks and graceful HTTP shutdown in Node applications",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k8ts/health.git"
+  },
+  "homepage": "https://github.com/k8ts/health",
   "funding": {
     "type": "GitHub",
     "url": "https://github.com/sponsors/jacobwgillespie"
@@ -15,6 +20,11 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "kubernetes",
+    "liveness",
+    "readiness"
   ],
   "scripts": {
     "build": "tsc",
