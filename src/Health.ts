@@ -1,4 +1,5 @@
 import {EventEmitter} from 'events'
+import {sleep} from './_utils'
 
 export type Status = 'Pending' | 'Live' | 'Ready' | 'NotReady' | 'Terminating'
 
@@ -213,9 +214,4 @@ export class Health {
       this.#options.forciblyTerminate()
     }, 1000).unref()
   }
-}
-
-/** Small utility to create a promise that resolves in the given number of milliseconds */
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms))
 }
