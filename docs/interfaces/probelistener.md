@@ -11,9 +11,9 @@ Fastify, Koa, and `http.Server`.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | `Object` |
+| Name      | Type             |
+| :-------- | :--------------- |
+| `ctx`     | `Object`         |
 | `ctx.res` | `ServerResponse` |
 
 #### Returns
@@ -33,9 +33,9 @@ Fastify, Koa, and `http.Server`.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `req` | `any` |
+| Name  | Type             |
+| :---- | :--------------- |
+| `req` | `any`            |
 | `res` | `ServerResponse` |
 
 #### Returns
@@ -55,10 +55,10 @@ Fastify, Koa, and `http.Server`.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `req` | `any` |
-| `res` | `Object` |
+| Name      | Type             |
+| :-------- | :--------------- |
+| `req`     | `any`            |
+| `res`     | `Object`         |
 | `res.raw` | `ServerResponse` |
 
 #### Returns

@@ -34,13 +34,13 @@
 
 ### Status
 
-Ƭ **Status**: ``"Pending"`` \| ``"Live"`` \| ``"Ready"`` \| ``"NotReady"`` \| ``"Terminating"``
+Ƭ **Status**: `"Pending"` \| `"Live"` \| `"Ready"` \| `"NotReady"` \| `"Terminating"`
 
 #### Defined in
 
 [Health.ts:4](https://github.com/k8ts/health/blob/main/src/Health.ts#L4)
 
-___
+---
 
 ### Task
 
@@ -80,8 +80,8 @@ Creates a new `ProbeListener` that returns 200 if the specified `Health` instanc
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type                          | Description           |
+| :------- | :---------------------------- | :-------------------- |
 | `health` | [`Health`](classes/health.md) | the `Health` instance |
 
 #### Returns
@@ -94,7 +94,7 @@ an `ProbeListener`
 
 [probes.ts:41](https://github.com/k8ts/health/blob/main/src/probes.ts#L41)
 
-___
+---
 
 ### createProbeServer
 
@@ -104,9 +104,9 @@ Creates a new `http.Server` configured to serve the liveness and readiness endpo
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `health` | [`Health`](classes/health.md) | the `Health` instance to serve |
+| Name      | Type                                                     | Description                         |
+| :-------- | :------------------------------------------------------- | :---------------------------------- |
+| `health`  | [`Health`](classes/health.md)                            | the `Health` instance to serve      |
 | `options` | [`ProbeServerOptions`](interfaces/probeserveroptions.md) | options for the health probe server |
 
 #### Returns
@@ -119,7 +119,7 @@ an `http.Server` ready to serve the health probes
 
 [probes.ts:97](https://github.com/k8ts/health/blob/main/src/probes.ts#L97)
 
-___
+---
 
 ### createReadinessProbeListener
 
@@ -129,8 +129,8 @@ Creates a new `ProbeListener` that returns 200 if the specified `Health` instanc
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type                          | Description           |
+| :------- | :---------------------------- | :-------------------- |
 | `health` | [`Health`](classes/health.md) | the `Health` instance |
 
 #### Returns
@@ -143,7 +143,7 @@ an `ProbeListener`
 
 [probes.ts:59](https://github.com/k8ts/health/blob/main/src/probes.ts#L59)
 
-___
+---
 
 ### gracefulHttpTerminatorTask
 
@@ -151,10 +151,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `server` | `http.Server` \| `https.Server` | `undefined` |
-| `terminationGracePeriodSeconds` | `number` | `1` |
+| Name                            | Type                            | Default value |
+| :------------------------------ | :------------------------------ | :------------ |
+| `server`                        | `http.Server` \| `https.Server` | `undefined`   |
+| `terminationGracePeriodSeconds` | `number`                        | `1`           |
 
 #### Returns
 
@@ -164,7 +164,7 @@ ___
 
 [graceful.ts:8](https://github.com/k8ts/health/blob/main/src/graceful.ts#L8)
 
-___
+---
 
 ### startProbeServer
 
@@ -174,12 +174,12 @@ Create and start a health probe server, listening on on the specified port / hos
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `health` | [`Health`](classes/health.md) | `undefined` | the `Health` instance to serve |
-| `options` | [`ProbeServerOptions`](interfaces/probeserveroptions.md) | `{}` | options for the health probe server |
-| `port` | `number` | `4000` | port to listen on (default: `4000`) |
-| `hostname?` | `string` | `undefined` | hostname to listen on (default: all hostnames) |
+| Name        | Type                                                     | Default value | Description                                    |
+| :---------- | :------------------------------------------------------- | :------------ | :--------------------------------------------- |
+| `health`    | [`Health`](classes/health.md)                            | `undefined`   | the `Health` instance to serve                 |
+| `options`   | [`ProbeServerOptions`](interfaces/probeserveroptions.md) | `{}`          | options for the health probe server            |
+| `port`      | `number`                                                 | `4000`        | port to listen on (default: `4000`)            |
+| `hostname?` | `string`                                                 | `undefined`   | hostname to listen on (default: all hostnames) |
 
 #### Returns
 

@@ -23,7 +23,7 @@ Pathname of the liveness endpoint
 
 [probes.ts:80](https://github.com/k8ts/health/blob/main/src/probes.ts#L80)
 
-___
+---
 
 ### readinessEndpoint
 

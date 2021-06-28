@@ -33,8 +33,8 @@ state, and automatically registers shutdown handlers to that run when the proces
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                                              |
+| :-------- | :------------------------------------------------ |
 | `options` | `Partial`<[`Options`](../interfaces/options.md)\> |
 
 #### Defined in
@@ -57,7 +57,7 @@ state, and automatically registers shutdown handlers to that run when the proces
 
 [Health.ts:75](https://github.com/k8ts/health/blob/main/src/Health.ts#L75)
 
-___
+---
 
 ### isReady
 
@@ -73,7 +73,7 @@ ___
 
 [Health.ts:82](https://github.com/k8ts/health/blob/main/src/Health.ts#L82)
 
-___
+---
 
 ### status
 
@@ -105,8 +105,8 @@ Add (register) a task that must complete before the application is considered li
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type                         | Description         |
+| :----- | :--------------------------- | :------------------ |
 | `task` | [`Task`](../modules.md#task) | the task to execute |
 
 #### Returns
@@ -117,7 +117,7 @@ Add (register) a task that must complete before the application is considered li
 
 [Health.ts:118](https://github.com/k8ts/health/blob/main/src/Health.ts#L118)
 
-___
+---
 
 ### beforeReady
 
@@ -127,8 +127,8 @@ Add (register) a task that must complete before the application is considered re
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type                         | Description         |
+| :----- | :--------------------------- | :------------------ |
 | `task` | [`Task`](../modules.md#task) | the task to execute |
 
 #### Returns
@@ -139,7 +139,7 @@ Add (register) a task that must complete before the application is considered re
 
 [Health.ts:130](https://github.com/k8ts/health/blob/main/src/Health.ts#L130)
 
-___
+---
 
 ### beforeTermination
 
@@ -149,8 +149,8 @@ Add (register) a task that must complete before the application terminates
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                         |
+| :-------- | :--------------------------- |
 | `handler` | [`Task`](../modules.md#task) |
 
 #### Returns
@@ -161,7 +161,7 @@ Add (register) a task that must complete before the application terminates
 
 [Health.ts:142](https://github.com/k8ts/health/blob/main/src/Health.ts#L142)
 
-___
+---
 
 ### createPendingTask
 
@@ -179,7 +179,7 @@ a `PendingTask` that can be marked as completed
 
 [Health.ts:151](https://github.com/k8ts/health/blob/main/src/Health.ts#L151)
 
-___
+---
 
 ### markNotReady
 
@@ -195,7 +195,7 @@ Mark the health instance as not ready
 
 [Health.ts:176](https://github.com/k8ts/health/blob/main/src/Health.ts#L176)
 
-___
+---
 
 ### markReady
 
@@ -211,7 +211,7 @@ Mark the health instance as ready
 
 [Health.ts:168](https://github.com/k8ts/health/blob/main/src/Health.ts#L168)
 
-___
+---
 
 ### shutdown
 

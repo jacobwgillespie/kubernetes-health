@@ -31,7 +31,7 @@ Function called to forcibly terminate the current process
 
 [Health.ts:21](https://github.com/k8ts/health/blob/main/src/Health.ts#L21)
 
-___
+---
 
 ### shutdownDelaySeconds
 
@@ -47,7 +47,7 @@ that in-flight requests are not rejected. Set to a number less than or equal to 
 
 [Health.ts:30](https://github.com/k8ts/health/blob/main/src/Health.ts#L30)
 
-___
+---
 
 ### shutdownSignals
 
@@ -61,7 +61,7 @@ Signals that trigger application shutdown.
 
 [Health.ts:37](https://github.com/k8ts/health/blob/main/src/Health.ts#L37)
 
-___
+---
 
 ### terminationGracePeriodSeconds
 
