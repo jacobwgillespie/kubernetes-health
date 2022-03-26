@@ -15,15 +15,17 @@ export function gracefulHttpTerminatorTask(
   const trackedSockets = new Set<Socket>()
 
   server.on('connection', (socket: Socket) => {
-    if (isTerminating) return socket.destroy()
+    if (isTerminating) return void socket.destroy()
     trackedSockets.add(socket)
     socket.once('close', () => trackedSockets.delete(socket))
+    return
   })
 
   server.on('secureConnection', (socket: TLSSocket) => {
-    if (isTerminating) return socket.destroy()
+    if (isTerminating) return void socket.destroy()
     trackedSockets.add(socket)
     socket.once('close', () => trackedSockets.delete(socket))
+    return
   })
 
   const destroySocket = (socket: Socket) => {
