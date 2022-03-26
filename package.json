@@ -31,6 +31,7 @@
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "generate:docs": "typedoc --out docs --excludePrivate --entryDocument ../README.md --hideBreadcrumbs --gitRevision main --githubPages false src/index.ts",
+    "type-check": "tsc --noEmit",
     "watch": "tsc --watch"
   },
   "devDependencies": {
