@@ -73,14 +73,14 @@ export class Health {
    * `true` if the application is live, `false` otherwise
    */
   get isLive(): boolean {
-    return !this.#isTerminating && this.#beforeLiveTasks.length === 0
+    return this.#beforeLiveTasks.length === 0
   }
 
   /**
    * `true` if the application is ready, `false` otherwise
    */
   get isReady(): boolean {
-    return this.#isReady && this.#beforeReadyTasks.length === 0
+    return !this.#isTerminating && this.#isReady && this.#beforeReadyTasks.length === 0
   }
 
   /**
