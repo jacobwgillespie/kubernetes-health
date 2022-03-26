@@ -1,5 +1,9 @@
 # kubernetes-health
 
+[![CI](https://github.com/jacobwgillespie/kubernetes-health/actions/workflows/ci.yml/badge.svg)](https://github.com/jacobwgillespie/kubernetes-health/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/kubernetes-health.svg)](https://www.npmjs.com/package/kubernetes-health)
+![Powered by TypeScript](https://img.shields.io/badge/powered%20by-typescript-blue.svg)
+
 A helper library for implementing Kubernetes heath checks and graceful HTTP shutdown in Node applications.
 
 - [Installation](#installation)
