@@ -30,18 +30,18 @@
     "build": "tsc",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
-    "generate:docs": "typedoc --out docs --excludePrivate --entryDocument ../README.md --hideBreadcrumbs --gitRevision main src/index.ts",
+    "generate:docs": "typedoc --out docs --excludePrivate --entryDocument ../README.md --hideBreadcrumbs --gitRevision main --githubPages false src/index.ts",
     "watch": "tsc --watch"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.9",
     "@types/node": "^12",
-    "prettier": "^2.3.2",
-    "prettier-plugin-organize-imports": "^2.2.0",
-    "prettier-plugin-pkg": "^0.10.0",
-    "typedoc": "^0.21.2",
-    "typedoc-plugin-markdown": "^3.10.2",
-    "typescript": "^4.3.4"
+    "prettier": "^2.6.1",
+    "prettier-plugin-organize-imports": "^2.3.4",
+    "prettier-plugin-pkg": "^0.11.1",
+    "typedoc": "^0.22.13",
+    "typedoc-plugin-markdown": "^3.11.14",
+    "typescript": "^4.6.3"
   },
   "publishConfig": {
     "access": "public"
