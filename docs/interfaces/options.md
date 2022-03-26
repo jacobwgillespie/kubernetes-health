@@ -29,7 +29,7 @@ Function called to forcibly terminate the current process
 
 #### Defined in
 
-[Health.ts:21](https://github.com/k8ts/health/blob/main/src/Health.ts#L21)
+[Health.ts:21](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L21)
 
 ---
 
@@ -45,7 +45,7 @@ that in-flight requests are not rejected. Set to a number less than or equal to 
 
 #### Defined in
 
-[Health.ts:30](https://github.com/k8ts/health/blob/main/src/Health.ts#L30)
+[Health.ts:30](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L30)
 
 ---
 
@@ -59,7 +59,7 @@ Signals that trigger application shutdown.
 
 #### Defined in
 
-[Health.ts:37](https://github.com/k8ts/health/blob/main/src/Health.ts#L37)
+[Health.ts:37](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L37)
 
 ---
 
@@ -74,4 +74,4 @@ value less than or equal to `0` to disable.
 
 #### Defined in
 
-[Health.ts:45](https://github.com/k8ts/health/blob/main/src/Health.ts#L45)
+[Health.ts:45](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L45)

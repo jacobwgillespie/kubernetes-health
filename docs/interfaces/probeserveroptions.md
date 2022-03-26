@@ -21,7 +21,7 @@ Pathname of the liveness endpoint
 
 #### Defined in
 
-[probes.ts:80](https://github.com/k8ts/health/blob/main/src/probes.ts#L80)
+[probes.ts:80](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L80)
 
 ---
 
@@ -35,4 +35,4 @@ Pathname of the readiness endpoint
 
 #### Defined in
 
-[probes.ts:87](https://github.com/k8ts/health/blob/main/src/probes.ts#L87)
+[probes.ts:87](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L87)

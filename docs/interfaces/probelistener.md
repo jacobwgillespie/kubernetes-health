@@ -22,7 +22,7 @@ Fastify, Koa, and `http.Server`.
 
 #### Defined in
 
-[probes.ts:9](https://github.com/k8ts/health/blob/main/src/probes.ts#L9)
+[probes.ts:9](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L9)
 
 ### ProbeListener
 
@@ -44,7 +44,7 @@ Fastify, Koa, and `http.Server`.
 
 #### Defined in
 
-[probes.ts:10](https://github.com/k8ts/health/blob/main/src/probes.ts#L10)
+[probes.ts:10](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L10)
 
 ### ProbeListener
 
@@ -67,4 +67,4 @@ Fastify, Koa, and `http.Server`.
 
 #### Defined in
 
-[probes.ts:11](https://github.com/k8ts/health/blob/main/src/probes.ts#L11)
+[probes.ts:11](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L11)

@@ -1,4 +1,4 @@
-# @k8ts/health
+# kubernetes-health
 
 ## Table of contents
 
@@ -11,6 +11,7 @@
 - [Options](interfaces/options.md)
 - [PendingTask](interfaces/pendingtask.md)
 - [ProbeListener](interfaces/probelistener.md)
+- [ProbeServerListenOptions](interfaces/probeserverlistenoptions.md)
 - [ProbeServerOptions](interfaces/probeserveroptions.md)
 
 ### Type aliases
@@ -38,7 +39,7 @@
 
 #### Defined in
 
-[Health.ts:4](https://github.com/k8ts/health/blob/main/src/Health.ts#L4)
+[Health.ts:4](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L4)
 
 ---
 
@@ -56,7 +57,7 @@
 
 #### Defined in
 
-[Health.ts:6](https://github.com/k8ts/health/blob/main/src/Health.ts#L6)
+[Health.ts:6](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L6)
 
 ## Variables
 
@@ -68,7 +69,7 @@ Default values for Health options, if not specified
 
 #### Defined in
 
-[Health.ts:49](https://github.com/k8ts/health/blob/main/src/Health.ts#L49)
+[Health.ts:49](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L49)
 
 ## Functions
 
@@ -92,7 +93,7 @@ an `ProbeListener`
 
 #### Defined in
 
-[probes.ts:41](https://github.com/k8ts/health/blob/main/src/probes.ts#L41)
+[probes.ts:41](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L41)
 
 ---
 
@@ -117,7 +118,7 @@ an `http.Server` ready to serve the health probes
 
 #### Defined in
 
-[probes.ts:97](https://github.com/k8ts/health/blob/main/src/probes.ts#L97)
+[probes.ts:97](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L97)
 
 ---
 
@@ -141,7 +142,7 @@ an `ProbeListener`
 
 #### Defined in
 
-[probes.ts:59](https://github.com/k8ts/health/blob/main/src/probes.ts#L59)
+[probes.ts:59](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L59)
 
 ---
 
@@ -162,24 +163,22 @@ an `ProbeListener`
 
 #### Defined in
 
-[graceful.ts:8](https://github.com/k8ts/health/blob/main/src/graceful.ts#L8)
+[graceful.ts:8](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/graceful.ts#L8)
 
 ---
 
 ### startProbeServer
 
-▸ **startProbeServer**(`health`, `options?`, `port?`, `hostname?`): `http.Server`
+▸ **startProbeServer**(`health`, `options?`): `http.Server`
 
 Create and start a health probe server, listening on on the specified port / hostname.
 
 #### Parameters
 
-| Name        | Type                                                     | Default value | Description                                    |
-| :---------- | :------------------------------------------------------- | :------------ | :--------------------------------------------- |
-| `health`    | [`Health`](classes/health.md)                            | `undefined`   | the `Health` instance to serve                 |
-| `options`   | [`ProbeServerOptions`](interfaces/probeserveroptions.md) | `{}`          | options for the health probe server            |
-| `port`      | `number`                                                 | `4000`        | port to listen on (default: `4000`)            |
-| `hostname?` | `string`                                                 | `undefined`   | hostname to listen on (default: all hostnames) |
+| Name      | Type                                                                                                                            | Description                         |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------- |
+| `health`  | [`Health`](classes/health.md)                                                                                                   | the `Health` instance to serve      |
+| `options` | [`ProbeServerOptions`](interfaces/probeserveroptions.md) & [`ProbeServerListenOptions`](interfaces/probeserverlistenoptions.md) | options for the health probe server |
 
 #### Returns
 
@@ -187,4 +186,4 @@ Create and start a health probe server, listening on on the specified port / hos
 
 #### Defined in
 
-[probes.ts:118](https://github.com/k8ts/health/blob/main/src/probes.ts#L118)
+[probes.ts:132](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/probes.ts#L132)

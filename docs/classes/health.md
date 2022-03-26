@@ -39,7 +39,7 @@ state, and automatically registers shutdown handlers to that run when the proces
 
 #### Defined in
 
-[Health.ts:101](https://github.com/k8ts/health/blob/main/src/Health.ts#L101)
+[Health.ts:101](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L101)
 
 ## Accessors
 
@@ -55,7 +55,7 @@ state, and automatically registers shutdown handlers to that run when the proces
 
 #### Defined in
 
-[Health.ts:75](https://github.com/k8ts/health/blob/main/src/Health.ts#L75)
+[Health.ts:75](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L75)
 
 ---
 
@@ -71,7 +71,7 @@ state, and automatically registers shutdown handlers to that run when the proces
 
 #### Defined in
 
-[Health.ts:82](https://github.com/k8ts/health/blob/main/src/Health.ts#L82)
+[Health.ts:82](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L82)
 
 ---
 
@@ -93,7 +93,7 @@ The overall application status, transitions between the following status states:
 
 #### Defined in
 
-[Health.ts:95](https://github.com/k8ts/health/blob/main/src/Health.ts#L95)
+[Health.ts:95](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L95)
 
 ## Methods
 
@@ -115,7 +115,7 @@ Add (register) a task that must complete before the application is considered li
 
 #### Defined in
 
-[Health.ts:118](https://github.com/k8ts/health/blob/main/src/Health.ts#L118)
+[Health.ts:118](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L118)
 
 ---
 
@@ -137,7 +137,7 @@ Add (register) a task that must complete before the application is considered re
 
 #### Defined in
 
-[Health.ts:130](https://github.com/k8ts/health/blob/main/src/Health.ts#L130)
+[Health.ts:130](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L130)
 
 ---
 
@@ -159,7 +159,7 @@ Add (register) a task that must complete before the application terminates
 
 #### Defined in
 
-[Health.ts:142](https://github.com/k8ts/health/blob/main/src/Health.ts#L142)
+[Health.ts:142](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L142)
 
 ---
 
@@ -177,7 +177,7 @@ a `PendingTask` that can be marked as completed
 
 #### Defined in
 
-[Health.ts:151](https://github.com/k8ts/health/blob/main/src/Health.ts#L151)
+[Health.ts:151](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L151)
 
 ---
 
@@ -193,7 +193,7 @@ Mark the health instance as not ready
 
 #### Defined in
 
-[Health.ts:176](https://github.com/k8ts/health/blob/main/src/Health.ts#L176)
+[Health.ts:176](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L176)
 
 ---
 
@@ -209,7 +209,7 @@ Mark the health instance as ready
 
 #### Defined in
 
-[Health.ts:168](https://github.com/k8ts/health/blob/main/src/Health.ts#L168)
+[Health.ts:168](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L168)
 
 ---
 
@@ -227,4 +227,4 @@ of time if it does not gracefully exit before then.
 
 #### Defined in
 
-[Health.ts:186](https://github.com/k8ts/health/blob/main/src/Health.ts#L186)
+[Health.ts:186](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L186)

@@ -1,4 +1,4 @@
-# @k8ts/health
+# kubernetes-health
 
 A helper library for implementing Kubernetes heath checks and graceful HTTP shutdown in Node applications.
 
@@ -15,21 +15,21 @@ A helper library for implementing Kubernetes heath checks and graceful HTTP shut
 Install using your preferred package manager:
 
 ```bash
-$ yarn add @k8ts/health
-$ pnpm add @k8ts/health
-$ npm install @k8ts/health
+$ yarn add kubernetes-health
+$ pnpm add kubernetes-health
+$ npm install kubernetes-health
 ```
 
 ## Usage
 
-`@k8ts/health` supports many different configuration options, can integrate with existing HTTP frameworks, can run tasks on termination, and and can gracefully handle in-flight HTTP requests. See below for more details.
+`kubernetes-health` supports many different configuration options, can integrate with existing HTTP frameworks, can run tasks on termination, and and can gracefully handle in-flight HTTP requests. See below for more details.
 
 To get started:
 
 1. First, create a new `Health` instance to track your application health:
 
    ```typescript
-   import {Health} from '@k8ts/health'
+   import {Health} from 'kubernetes-health'
 
    const health = new Health()
    ```
@@ -43,7 +43,7 @@ To get started:
 3. You will need to expose this health status to Kubernetes via an HTTP endpoint, the easiest way to do this is to start a standalone health server with `startProbeServer()`:
 
    ```typescript
-   import {startProbeServer} from '@k8ts/health'
+   import {startProbeServer} from 'kubernetes-health'
 
    startProbeServer(health)
    ```
@@ -61,7 +61,7 @@ To get started:
 To serve a standard Node `http.Server` for the liveness and readiness endpoints:
 
 ```typescript
-import {Health, startProbeServer} from '@k8ts/health'
+import {Health, startProbeServer} from 'kubernetes-health'
 const health = new Health()
 
 startProbeServer(health)
@@ -70,7 +70,7 @@ startProbeServer(health)
 To create a new Node `http.Server`, but not automatically listen:
 
 ```typescript
-import {Health, createProbeServer} from '@k8ts/health'
+import {Health, createProbeServer} from 'kubernetes-health'
 const health = new Health()
 
 const server = createProbeServer(health)
@@ -81,7 +81,7 @@ const server = createProbeServer(health)
 To mark the application as ready when the server is listening, and gracefully handle in-flight requests during termination:
 
 ```typescript
-import {Health, gracefulHttpTerminatorTask} from '@k8ts/health'
+import {Health, gracefulHttpTerminatorTask} from 'kubernetes-health'
 import express from 'express'
 
 const health = new Health()
@@ -99,7 +99,7 @@ health.beforeTermination(gracefulHttpTerminatorTask(server))
 To integrate the liveness and readiness endpoints into an existing Express application:
 
 ```typescript
-import {Health, createLivenessProbeListener, createReadinessProbeListener} from '@k8ts/health'
+import {Health, createLivenessProbeListener, createReadinessProbeListener} from 'kubernetes-health'
 import express from 'express'
 
 const health = new Health()

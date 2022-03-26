@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[Health.ts:9](https://github.com/k8ts/health/blob/main/src/Health.ts#L9)
+[Health.ts:9](https://github.com/jacobwgillespie/kubernetes-health/blob/main/src/Health.ts#L9)
